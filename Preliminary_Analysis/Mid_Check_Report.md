@@ -8,10 +8,10 @@
 1. To train models on the profitability of movies, we need both the budget and Box office number, therefore any movie missing one or both of these two numbers was removed from the dataset.
 2. The dataset provided the original budget and box office number. However, given the fact that the dataset contains movies over two decades (1997-2017), the inflation factor must be considered. Therefore, we normalized the budget and box office numbers year-by-year using the inflation rate of 2017, so that we can make valid analyses on movies across two decades.
 3. The profitability of a movie is calculated as such: the ratio of box office over budget, based upon which we divided the movies into four categories:
--Poor(1): ratio < 1 These movies definitely lose money from box office.
--Fair(2): ratio between 1 and 2. These movies can earn budget back from box office, but are barely profitable.
--Good(3): ratio between 2 and 4. These movies are guaranteed profitable.
--Great(4): ration above 4. These movies are the true blockbusters that earned more than expected.
+a.Poor(1): ratio < 1 These movies definitely lose money from box office.
+b.Fair(2): ratio between 1 and 2. These movies can earn budget back from box office, but are barely profitable.
+c.Good(3): ratio between 2 and 4. These movies are guaranteed profitable.
+d.Great(4): ration above 4. These movies are the true blockbusters that earned more than expected.
 4. Some features that are either obviously not relevant to their box office numbers, or too complicated to calculate in this project, were removed, including movie ID, movie name, posters, keywords, DVD release date, length, and awards.
 5. Since the movies released in different times in a year may fair differently, we extracted the months from the release date to be included in our further analysis.
 

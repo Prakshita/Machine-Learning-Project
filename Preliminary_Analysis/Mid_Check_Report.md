@@ -14,6 +14,10 @@ Good(3): ratio between 2 and 4. These movies are guaranteed profitable.
 Great(4): ratio above 4. These movies are the true blockbusters that earned more than expected.
 4. Some features that are either obviously not relevant to their box office numbers, or too complicated to calculate in this project, were removed, including movie ID, movie name, posters, keywords, DVD release date, length, and awards.
 5. Since the movies released in different times in a year may fair differently, we extracted the months from the release date to be included in our further analysis.
+6. To accomodate the features like producer, actors, director we replaced the data in them with the net box office gross for each of them.
+	A. For actors we summed up the net box office gross of each of the actors.
+	B. For production we replaced it with the total gross of all the movies of the production house.
+	C. For Directors we replaced the director with the net box office gross of all the movies directed by him.
 
 ####Logistic Thinking on Modeling choice
 1. From the producer's perspective, it is essential to know if they can earn their budget back from box office, whereas for the distributers, who take money directly from box office, the box office numbers matter more to them. To build models that can satisfy both requirements, we decided to create two models: one is a regression model to predict the box office number, the other is a classification model to predict the profitability of a movie.
@@ -24,3 +28,6 @@ Great(4): ratio above 4. These movies are the true blockbusters that earned more
 2. The average box office was also calculated for each movie rating. G, PG and PG-13 movies fair better than R and NC17 on average.
 3. The average box office was calculated by month. Movies released in May, June and December earn higher in average box office compare to other months of a year.
 4. If we build a Boost Tree model using just the ratings and genre to classify the profitability of movies, based upon the feature importance analysis, the top five features are: Comedy, Drama, Romance, PG-13 and R.
+
+####Room for improvement
+1. Find a way to use the movie plot as a feature by creating a tf-idf score, also using word2vec to find the cosine distance by comparing a movie plot with successful and unsuccessful movies and assigning it a score.

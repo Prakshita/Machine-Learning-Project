@@ -1,6 +1,5 @@
-# CS6375 Group Project: Box Office Forecast
-### Team Blockbuster
-#### Team Member: Jin Liu, Rakesh Reddy, Prakshita Nag
+ Box Office Forecast
+#### Team Member: Prakshita Nag
 
 ### Introduction
 Forecasting box-office performance is one of the most important decisions that production houses and movie distributors are involved in before getting involved in a project. In this project, we study the movie data from 1997 to 2017, to help predicting the profitability of a movie at the box office based upon other variables including genre, rating, and release dates, etc. The example questions we would like to address are as follows:
